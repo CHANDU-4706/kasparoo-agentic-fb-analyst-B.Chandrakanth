@@ -1,19 +1,60 @@
 # Kasparro — Agentic Facebook Performance Analyst
 
-## Quick Start
-```bash
-python -V  # should be >= 3.10
-python -m venv .venv 
-# Windows: .venv\Scripts\activate
-# Mac/Linux: source .venv/bin/activate
+## Quick Start (Step-by-Step)
 
+Follow these exact steps to set up and run the project:
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/CHANDU-4706/kasparoo-agentic-fb-analyst-B.Chandrakanth.git
+cd kasparoo-agentic-fb-analyst-B.Chandrakanth
+```
+
+### 2. Set up Python Environment
+```bash
+# Check Python version (must be >= 3.10)
+python -V
+
+# Create virtual environment
+python -m venv .venv
+
+# Activate environment
+# Windows:
+.venv\Scripts\activate
+# Mac/Linux:
+source .venv/bin/activate
+```
+
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
+```
+
+### 4. Configure API Key
+1. Copy the example environment file:
+   ```bash
+   # Windows
+   copy .env.example .env
+   # Mac/Linux
+   cp .env.example .env
+   ```
+2. Open `.env` and paste your **Groq API Key**:
+   ```text
+   GROQ_API_KEY=gsk_...
+   ```
+
+### 5. Run Analysis
+```bash
 python src/run.py "Analyze ROAS drop in last 7 days"
 ```
 
+---
+
 ## Data
-- Place the full CSV locally and set `DATA_CSV=data/synthetic_fb_ads_undergarments.csv` (or ensure it is in `data/`).
-- Or copy a small sample to `data/sample_fb_ads.csv`.
+- **Default**: The system uses `data/sample_fb_ads.csv` by default (configured in `config.yaml`) for instant reproducibility.
+- **Full Data**: To use the full dataset:
+    1. Place `synthetic_fb_ads_undergarments.csv` in the `data/` folder.
+    2. Edit `config/config.yaml` and set `use_sample_data: false`.
 - See `data/README.md` for details.
 
 ## Config
@@ -32,7 +73,7 @@ use_sample_data: true
 - `logs/` — trace.json (structured logs)
 - `tests/` — test_evaluator.py
 
-## Run
+## Run Options
 ```bash
 make run  # or: python src/run.py "Analyze ROAS drop"
 ```
