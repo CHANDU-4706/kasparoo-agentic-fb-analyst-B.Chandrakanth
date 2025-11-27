@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Data
+# Ignore the full dataset to keep repo light, as we use sample data
+data/synthetic_fb_ads_undergarments.csv
+
+# OS
+.DS_Store

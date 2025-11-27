@@ -1,0 +1,15 @@
+llm:
+  model: "llama-3.3-70b-versatile"
+  temperature: 0.0
+
+python: "3.10"
+random_seed: 42
+use_sample_data: false
+
+data:
+  csv_path: "data/synthetic_fb_ads_undergarments.csv"
+  sample_path: "data/sample_fb_ads.csv"
+
+thresholds:
+  confidence_min: 0.6
+  roas_target: 2.0

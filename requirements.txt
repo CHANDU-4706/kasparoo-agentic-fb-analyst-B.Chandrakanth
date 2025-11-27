@@ -1,0 +1,12 @@
+langchain
+langgraph
+pandas
+langchain-google-genai
+langfuse
+python-dotenv
+pydantic
+pyyaml
+matplotlib
+seaborn
+tabulate
+langchain-groq
