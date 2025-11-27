@@ -4,7 +4,7 @@ llm:
 
 python: "3.10"
 random_seed: 42
-use_sample_data: false
+use_sample_data: true
 
 data:
   csv_path: "data/synthetic_fb_ads_undergarments.csv"
